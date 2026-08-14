@@ -1,0 +1,66 @@
+/* ==========================================================================
+   Responsive Styles - خدمات المنيا الجديدة
+   ========================================================================== */
+
+/* ---------- Tablets الكبيرة (≤1200px) ---------- */
+@media (max-width: 1200px){
+  .grid-4{ grid-template-columns:repeat(3,1fr); }
+  .footer-grid{ grid-template-columns:1.2fr 1fr 1fr; }
+  .footer-grid .footer-col:nth-child(3){ display:none; }
+}
+
+/* ---------- Tablets (≤992px) ---------- */
+@media (max-width: 992px){
+  .nav-links{ display:none; }
+  .nav-toggle{ display:block; }
+  .grid-4, .grid-3{ grid-template-columns:repeat(2,1fr); }
+  .split-section{ grid-template-columns:1fr; }
+  .split-media img{ height:320px; }
+  .auth-wrapper{ grid-template-columns:1fr; }
+  .auth-visual{ display:none; }
+  .details-info-grid{ grid-template-columns:1fr; }
+  .sticky-side{ position:static; }
+  .footer-grid{ grid-template-columns:1fr 1fr; gap:36px; }
+  .hero-stats{ gap:26px; }
+  .cta-banner{ padding:44px 24px; }
+
+  /* قائمة الجوال المنسدلة */
+  .nav-links.mobile-open{
+    display:flex; flex-direction:column; position:absolute; top:100%; right:0; left:0;
+    background:#fff; padding:14px; box-shadow:var(--shadow-md); gap:4px; border-top:1px solid var(--color-border);
+  }
+  .nav-links.mobile-open a{ padding:14px 16px; border-radius:12px; }
+}
+
+/* ---------- الجوالات الكبيرة (≤768px) ---------- */
+@media (max-width: 768px){
+  section{ padding:60px 0; }
+  .grid-4, .grid-3, .grid-2{ grid-template-columns:1fr; }
+  .hero{ min-height:auto; padding:150px 0 60px; text-align:center; }
+  .hero-content{ margin-inline:auto; }
+  .hero-content p{ margin-inline:auto; }
+  .hero-actions{ justify-content:center; }
+  .hero-search{ flex-direction:column; margin-top:24px; }
+  .hero-search select, .hero-search input{ width:100%; }
+  .hero-stats{ justify-content:center; text-align:center; margin-top:36px; }
+  .categories-strip{ flex-direction:column; }
+  .footer-grid{ grid-template-columns:1fr; gap:34px; text-align:right; }
+  .details-card{ margin-inline:16px; flex-direction:column; align-items:flex-start; }
+  .page-header{ padding:130px 0 50px; }
+  .filter-bar{ flex-direction:column; align-items:stretch; }
+  .filter-chips{ overflow-x:auto; flex-wrap:nowrap; padding-bottom:6px; }
+  .cta-actions{ flex-direction:column; }
+  .cta-actions .btn{ width:100%; }
+  .container{ padding-inline:18px; }
+}
+
+/* ---------- الجوالات الصغيرة (≤480px) ---------- */
+@media (max-width: 480px){
+  .brand small{ display:none; }
+  .hero-content h1{ font-size:2rem; }
+  .section-heading h2{ font-size:1.5rem; }
+  .details-hero{ height:220px; }
+  .back-to-top{ left:16px; bottom:16px; width:42px; height:42px; }
+  .auth-box{ max-width:100%; }
+  .modal-box{ padding:24px; }
+}
