@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الخدمات | خدمات المنيا الجديدة</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+
+<div id="page-loader"><div class="loader-palm"></div></div>
+
+<!-- ============ الهيدر ============ -->
+<header class="site-header">
+  <div class="container navbar">
+    <a href="index.html" class="brand">
+      <span class="brand-mark"><i class="fa-solid fa-city"></i></span>
+      <span>خدمات المنيا الجديدة<small>New Minya Services</small></span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">الرئيسية</a>
+      <a href="services.html" class="active">الخدمات</a>
+      <a href="providers.html">مقدمو الخدمات</a>
+      <a href="offers.html">العروض</a>
+      <a href="news.html">الأخبار</a>
+      <a href="about.html">من نحن</a>
+      <a href="contact.html">تواصل معنا</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="login.html" class="btn btn-outline btn-sm d-none d-md-inline-flex">تسجيل الدخول</a>
+      <a href="register.html" class="btn btn-primary btn-sm d-none d-md-inline-flex">إنشاء حساب</a>
+      <button class="nav-toggle"><i class="bi bi-list"></i></button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ رأس الصفحة ============ -->
+<section class="page-header">
+  <div class="container">
+    <h1>كل الخدمات في المنيا الجديدة</h1>
+    <div class="breadcrumb">
+      <a href="index.html">الرئيسية</a> <i class="bi bi-chevron-left"></i> <span>الخدمات</span>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:60px">
+  <div class="container">
+
+    <!-- شريط البحث والفلاتر -->
+    <div class="filter-bar" data-reveal>
+      <div class="search-box">
+        <input type="text" id="serviceSearch" placeholder="ابحث عن خدمة بالاسم...">
+        <i class="bi bi-search"></i>
+      </div>
+      <div class="filter-chips">
+        <button class="filter-chip active" data-category="all">الكل</button>
+        <button class="filter-chip" data-category="restaurants">مطاعم</button>
+        <button class="filter-chip" data-category="hospitals">مستشفيات</button>
+        <button class="filter-chip" data-category="pharmacies">صيدليات</button>
+        <button class="filter-chip" data-category="education">تعليم</button>
+        <button class="filter-chip" data-category="sports">رياضة</button>
+        <button class="filter-chip" data-category="shopping">تسوق</button>
+        <button class="filter-chip" data-category="home">خدمات منزلية</button>
+      </div>
+    </div>
+
+    <div class="results-info">
+      <span id="resultsCount">16 خدمة متاحة</span>
+      <span class="text-muted"><i class="bi bi-funnel"></i> ترتيب حسب: الأعلى تقييمًا</span>
+    </div>
+
+    <!-- شبكة الخدمات -->
+    <div class="grid grid-4" id="servicesGrid">
+
+      <div class="service-card" data-category="restaurants" data-name="مطعم النيل الذهبي">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=500&q=80" alt="مطعم النيل الذهبي">
+          <span class="card-badge">مطاعم</span><span class="card-rating"><i class="bi bi-star-fill"></i> 4.8</span>
+        </div>
+        <div class="card-body">
+          <h3>مطعم النيل الذهبي</h3>
+          <p>مأكولات شرقية وغربية أصيلة بإطلالة هادئة.</p>
+          <div class="card-meta"><i class="bi bi-geo-alt"></i> الحي الأول</div>
+          <div class="card-footer"><span class="text-primary fw-bold">من 150 ج.م</span><a href="service-details.html?id=nile-golden-restaurant" class="btn btn-outline btn-sm">التفاصيل</a></div>
+        </div>
+      </div>
+
+      <div class="service-card" data-category="restaurants" data-name="مطعم واحة الشرق">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=500&q=80" alt="مطعم واحة الشرق">
+          <span class="card-badge">مطاعم</span><span class="card-rating"><i class="bi bi-star-fill"></i> 4.5</span>
+        </div>
+        <div class="card-body">
+          <h3>مطعم واحة الشرق</h3>
+          <p>أشهى المشويات والمأكولات الشعبية بأسعار مناسبة.</p>
+          <div class="card-meta"><i class="bi bi-geo-alt"></i> الحي الثالث</div>
+          <div class="card-footer"><span class="text-primary fw-bold">من 90 ج.م</span><a href="service-details.html?id=waha-sharq-restaurant" class="btn btn-outline btn-sm">التفاصيل</a></div>
+        </div>
+      </div>
+
+      <div class="service-card" data-category="hospitals" data-name="مستشفى المنيا الجديدة التخصصي">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=500&q=80" alt="مستشفى المنيا الجديدة التخصصي">
+          <span class="card-badge">مستشفيات</span><span class="card-rating"><i class="bi bi-star-fill"></i> 4.9</span>
+        </div>
+        <div class="card-body">
+          <h3>مستشفى المنيا الجديدة التخصصي</h3>
+          <p>رعاية طبية متكاملة على مدار الساعة.</p>
+          <div class="card-meta"><i class="bi bi-geo-alt"></i> المحور المركزي</div>
+          <div class="card-footer"><span class="text-primary fw-bold">طوارئ 24 ساعة</span><a href="service-details.html?id=minya-specialist-hospital" class="btn btn-outline btn-sm">التفاصيل</a></div>
+        </div>
+      </div>
+
+      <div class="service-card" data-category="hospitals" data-name="مركز الرعاية الطبية الحديث">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1587351021759-3e566b6af7cc?w=500&q=80" alt="مركز الرعاية الطبية">
+          <span class="card-badge">مستشفيات</span><span class="card-rating"><i class="bi bi-star-fill"></i> 4.6</span>
+        </div>
+        <div class="card-body">
+          <h3>مركز الرعاية الطبية الحديث</h3>
+          <p>عيادات متخصصة وأشعة وتحاليل طبية بأحدث الأجهزة.</p>
+          <div class="card-meta"><i class="bi bi-geo-alt"></i> الحي الثاني</div>
+          <div class="card-footer"><span class="text-primary fw-bold">حجز فوري</span><a href="service-details.html?id=modern-medical-center" class="btn btn-outline btn-sm">التفاصيل</a></div>
+        </div>
+      </div>
+
+      <div class="service-card" data-category="pharmacies" data-name="صيدلية الشفاء">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=500&q=80" alt="صيدلية الشفاء">
+          <span class="card-badge">صيدليات</span><span class="card-rating"><i class="bi bi-star-fill"></i> 4.7</span>
+        </div>
+        <div class="card-body">
+          <h3>صيدلية الشفاء</h3>
+          <p>توفير جميع الأدوية ومستلزمات العناية بأسعار تنافسية.</p>
+          <div class="card-meta"><i class="bi bi-geo-alt"></i> شارع السوق المركزي</div>
+          <div class="card-footer"><span class="text-primary fw-bold">توصيل مجاني</span><a href="service-details.html?id=shifa-pharmacy" class="btn btn-outline btn-sm">التفاصيل</a></div>
+        </div>
+      </div>
+
+      <div class="service-card" data-category="pharmacies" data-name="صيدلية النور">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1471864190281-a93a3070b6de?w=500&q=80" alt="صيدلية النور">
+          <span class="card-badge">صيدليات</span><span class="card-rating"><i class="bi bi-star-fill"></i> 4.4</span>
+        </div>
+        <div class="card-body">
+          <h3>صيدلية النور</h3>
+          <p>خدمة 24 ساعة وفريق صيادلة متخصص لخدمتك.</p>
+          <div class="card-meta"><i class="bi bi-geo-alt"></i> الحي الرابع</div>
+          <div class="card-footer"><span class="text-primary fw-bold">متاح الآن</span><a href="service-details.html?id=nour-pharmacy" class="btn btn-outline btn-sm">التفاصيل</a></div>
+        </div>
+      </div>
+
+      <div class="service-card" data-category="education" data-name="جامعة المنيا الجديدة الأهلية">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=500&q=80" alt="جامعة المنيا الجديدة الأهلية">
+          <span class="card-badge">تعليم</span><span class="card-rating"><i class="bi bi-star-fill"></i> 4.7</span>
+        </div>
+        <div class="card-body">
+          <h3>جامعة المنيا الجديدة الأهلية</h3>
+          <p>كليات متنوعة ومعتمدة وحرم جامعي حديث.</p>
+          <div class="card-meta"><i class="bi bi-geo-alt"></i> المنطقة التعليمية</div>
+          <div class="card-footer"><span class="text-primary fw-bold">تسجيل مفتوح</span><a href="service-details.html?id=minya-private-university" class="btn btn-outline btn-sm">التفاصيل</a></div>
+        </div>
+      </div>
+
+      <div class="service-card" data-category="education" data-name="مدرسة المستقبل الدولية">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=500&q=80" alt="مدرسة المستقبل الدولية">
+          <span class="card-badge">تعليم</span><span class="card-rating"><i class="bi bi-star-fill"></i> 4.6</span>
+        </div>
+        <div class="card-body">
+          <h3>مدرسة المستقبل الدولية</h3>
+          <p>مناهج بريطانية ومصرية، وأنشطة لا منهجية متكاملة.</p>
+          <div class="card-meta"><i class="bi bi-geo-alt"></i> الحي التعليمي</div>
+          <div class="card-footer"><span class="text-primary fw-bold">قبول جديد</span><a href="service-details.html?id=future-international-school" class="btn btn-outline btn-sm">التفاصيل</a></div>
+        </div>
+      </div>
+
+      <div class="service-card" data-category="sports" data-name="نادي المنيا الجديدة الرياضي">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=500&q=80" alt="نادي المنيا الجديدة الرياضي">
+          <span class="card-badge">رياضة</span><span class="card-rating"><i class="bi bi-star-fill"></i> 4.5</span>
+        </div>
+        <div class="card-body">
+          <h3>نادي المنيا الجديدة الرياضي</h3>
+          <p>صالة جيم مجهزة، حمام سباحة، وملاعب متعددة الأغراض.</p>
+          <div class="card-meta"><i class="bi bi-geo-alt"></i> شارع الحدائق</div>
+          <div class="card-footer"><span class="text-primary fw-bold">اشتراك شهري</span><a href="service-details.html?id=minya-sports-club" class="btn btn-outline btn-sm">التفاصيل</a></div>
+        </div>
+      </div>
+
+      <div class="service-card" data-category="sports" data-name="أكاديمية النخبة لكرة القدم">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1552667466-07770ae110d0?w=500&q=80" alt="أكاديمية النخبة">
+          <span class="card-badge">رياضة</span><span class="card-rating"><i class="bi bi-star-fill"></i> 4.3</span>
+        </div>
+        <div class="card-body">
+          <h3>أكاديمية النخبة لكرة القدم</h3>
+          <p>تدريب احترافي للأطفال والناشئين على أيدي مدربين معتمدين.</p>
+          <div class="card-meta"><i class="bi bi-geo-alt"></i> منطقة الأندية</div>
+          <div class="card-footer"><span class="text-primary fw-bold">تجربة مجانية</span><a href="service-details.html?id=elite-football-academy" class="btn btn-outline btn-sm">التفاصيل</a></div>
+        </div>
+      </div>
+
+      <div class="service-card" data-category="shopping" data-name="مول واحة المنيا">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1519415943484-9fa1873496d4?w=500&q=80" alt="مول واحة المنيا">
+          <span class="card-badge">تسوق</span><span class="card-rating"><i class="bi bi-star-fill"></i> 4.6</span>
+        </div>
+        <div class="card-body">
+          <h3>مول واحة المنيا</h3>
+          <p>أكبر مركز تسوق بالمدينة يضم أشهر الماركات والمطاعم.</p>
+          <div class="card-meta"><i class="bi bi-geo-alt"></i> شارع الساحل الأخضر</div>
+          <div class="card-footer"><span class="text-primary fw-bold">يوميًا 10ص-12م</span><a href="service-details.html?id=waha-minya-mall" class="btn btn-outline btn-sm">التفاصيل</a></div>
+        </div>
+      </div>
+
+      <div class="service-card" data-category="shopping" data-name="سوق المنيا الجديدة التجاري">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1555529771-7888783a18d3?w=500&q=80" alt="سوق المنيا الجديدة التجاري">
+          <span class="card-badge">تسوق</span><span class="card-rating"><i class="bi bi-star-fill"></i> 4.2</span>
+        </div>
+        <div class="card-body">
+          <h3>سوق المنيا الجديدة التجاري</h3>
+          <p>محلات متنوعة للملابس والأدوات المنزلية بأسعار مناسبة.</p>
+          <div class="card-meta"><i class="bi bi-geo-alt"></i> وسط المدينة</div>
+          <div class="card-footer"><span class="text-primary fw-bold">عروض يومية</span><a href="service-details.html?id=minya-trade-market" class="btn btn-outline btn-sm">التفاصيل</a></div>
+        </div>
+      </div>
+
+      <div class="service-card" data-category="home" data-name="خدمات النظافة المنزلية الشاملة">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=500&q=80" alt="خدمات النظافة المنزلية">
+          <span class="card-badge">خدمات منزلية</span><span class="card-rating"><i class="bi bi-star-fill"></i> 4.5</span>
+        </div>
+        <div class="card-body">
+          <h3>خدمات النظافة المنزلية الشاملة</h3>
+          <p>تنظيف منازل وشقق بفريق مدرب وأدوات معقمة.</p>
+          <div class="card-meta"><i class="bi bi-geo-alt"></i> تغطية جميع الأحياء</div>
+          <div class="card-footer"><span class="text-primary fw-bold">من 200 ج.م</span><a href="service-details.html?id=home-cleaning-services" class="btn btn-outline btn-sm">التفاصيل</a></div>
+        </div>
+      </div>
+
+      <div class="service-card" data-category="home" data-name="صيانة السباكة والكهرباء الفورية">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?w=500&q=80" alt="صيانة السباكة والكهرباء">
+          <span class="card-badge">خدمات منزلية</span><span class="card-rating"><i class="bi bi-star-fill"></i> 4.4</span>
+        </div>
+        <div class="card-body">
+          <h3>صيانة السباكة والكهرباء الفورية</h3>
+          <p>فريق فني متخصص للاستجابة السريعة على مدار اليوم.</p>
+          <div class="card-meta"><i class="bi bi-geo-alt"></i> تغطية جميع الأحياء</div>
+          <div class="card-footer"><span class="text-primary fw-bold">استجابة فورية</span><a href="service-details.html?id=plumbing-electrical-maintenance" class="btn btn-outline btn-sm">التفاصيل</a></div>
+        </div>
+      </div>
+
+      <div class="service-card" data-category="restaurants" data-name="كافيه ذا جرين">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=500&q=80" alt="كافيه ذا جرين">
+          <span class="card-badge">مطاعم</span><span class="card-rating"><i class="bi bi-star-fill"></i> 4.6</span>
+        </div>
+        <div class="card-body">
+          <h3>كافيه ذا جرين</h3>
+          <p>أجواء هادئة للعمل والدراسة مع أشهى المشروبات.</p>
+          <div class="card-meta"><i class="bi bi-geo-alt"></i> الحي الأول</div>
+          <div class="card-footer"><span class="text-primary fw-bold">من 60 ج.م</span><a href="service-details.html?id=green-cafe" class="btn btn-outline btn-sm">التفاصيل</a></div>
+        </div>
+      </div>
+
+      <div class="service-card" data-category="education" data-name="مركز الرواد لتعليم اللغات">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=500&q=80" alt="مركز الرواد لتعليم اللغات">
+          <span class="card-badge">تعليم</span><span class="card-rating"><i class="bi bi-star-fill"></i> 4.8</span>
+        </div>
+        <div class="card-body">
+          <h3>مركز الرواد لتعليم اللغات</h3>
+          <p>دورات إنجليزية وفرنسية معتمدة لجميع المستويات.</p>
+          <div class="card-meta"><i class="bi bi-geo-alt"></i> المنطقة التعليمية</div>
+          <div class="card-footer"><span class="text-primary fw-bold">مجموعات جديدة</span><a href="service-details.html?id=rowad-language-center" class="btn btn-outline btn-sm">التفاصيل</a></div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- حالة عدم وجود نتائج -->
+    <div class="empty-state" id="emptyState" style="display:none">
+      <i class="bi bi-search"></i>
+      <h4>لا توجد نتائج مطابقة</h4>
+      <p>جرّب كلمة بحث أخرى أو اختر تصنيفًا مختلفًا.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ الفوتر ============ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand"><span class="brand-mark"><i class="fa-solid fa-city"></i></span><span>خدمات المنيا الجديدة</span></a>
+        <p>منصتك الرقمية الأولى لاكتشاف وحجز كل الخدمات في مدينة المنيا الجديدة.</p>
+        <div class="social-icons">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>روابط سريعة</h5>
+        <ul><li><a href="index.html">الرئيسية</a></li><li><a href="services.html">الخدمات</a></li><li><a href="offers.html">العروض</a></li><li><a href="news.html">الأخبار</a></li></ul>
+      </div>
+      <div class="footer-col">
+        <h5>التصنيفات</h5>
+        <ul><li><a href="services.html">مطاعم</a></li><li><a href="services.html">مستشفيات</a></li><li><a href="services.html">تعليم</a></li><li><a href="services.html">خدمات منزلية</a></li></ul>
+      </div>
+      <div class="footer-col">
+        <h5>تواصل معنا</h5>
+        <div class="contact-line"><i class="bi bi-geo-alt"></i><span>المحور المركزي، المنيا الجديدة</span></div>
+        <div class="contact-line"><i class="bi bi-telephone"></i><span>086-1234567</span></div>
+        <div class="contact-line"><i class="bi bi-envelope"></i><span>info@newminya-services.eg</span></div>
+      </div>
+    </div>
+    <div class="footer-bottom">&copy; 2026 خدمات المنيا الجديدة. جميع الحقوق محفوظة.</div>
+  </div>
+</footer>
+
+<button class="back-to-top"><i class="bi bi-arrow-up"></i></button>
+
+<!-- ============ نافذة الحجز ============ -->
+<div class="modal-overlay" id="bookingModal">
+  <div class="modal-box">
+    <div id="bookingFormStep">
+      <div class="modal-head">
+        <h3>احجز خدمتك الآن</h3>
+        <button class="modal-close" data-close-booking><i class="bi bi-x-lg"></i></button>
+      </div>
+      <form id="bookingForm" novalidate>
+        <div class="form-group">
+          <label>الاسم الكامل</label>
+          <input type="text" id="bookingName" class="form-control" placeholder="اكتب اسمك بالكامل">
+          <span class="form-error">برجاء إدخال اسم صحيح (3 أحرف على الأقل)</span>
+        </div>
+        <div class="form-group">
+          <label>رقم الهاتف</label>
+          <input type="tel" id="bookingPhone" class="form-control" placeholder="01012345678">
+          <span class="form-error">رقم الهاتف غير صحيح</span>
+        </div>
+        <div class="form-group">
+          <label>اختر الخدمة</label>
+          <select id="bookingService" class="form-control">
+            <option value="">-- اختر الخدمة --</option>
+            <option value="مطعم النيل الذهبي">مطعم النيل الذهبي</option>
+            <option value="صيدلية الشفاء">صيدلية الشفاء</option>
+            <option value="نادي المنيا الجديدة الرياضي">نادي المنيا الجديدة الرياضي</option>
+            <option value="مول واحة المنيا">مول واحة المنيا</option>
+          </select>
+          <span class="form-error">برجاء اختيار الخدمة</span>
+        </div>
+        <div class="row g-3">
+          <div class="col-6"><div class="form-group"><label>التاريخ</label><input type="date" id="bookingDate" class="form-control"><span class="form-error">برجاء اختيار التاريخ</span></div></div>
+          <div class="col-6"><div class="form-group"><label>الوقت</label><input type="time" id="bookingTime" class="form-control"><span class="form-error">برجاء اختيار الوقت</span></div></div>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block mt-2">تأكيد الحجز</button>
+      </form>
+    </div>
+    <div id="bookingSuccessStep" class="success-box" style="display:none">
+      <div class="success-icon"><i class="bi bi-check-lg"></i></div>
+      <h4>تم الحجز بنجاح!</h4>
+      <p>سنتواصل معك قريبًا لتأكيد موعد الحجز. شكرًا لاستخدامك خدمات المنيا الجديدة.</p>
+      <button class="btn btn-outline" data-close-booking>إغلاق</button>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="main.js"></script>
+<script src="filter.js"></script>
+<script src="booking.js"></script>
+</body>
+</html>
